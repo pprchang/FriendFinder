@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Friend Finder</title>
+  </head>
+
+  <body>
+    <!--Heading-->
+    <div class="container align-middle mt-4">
+      <div class="card text-center bg-info rounded-pill" style="width: 70rem;">
+        <div class="card-body">
+          <h1
+            class="card-title font-weight-bold text-white"
+            style="font-family: 'Playfair Display', serif;"
+          >
+            <img
+              src="/app/public/img/survey.svg"
+              alt="People"
+              class="mr-3 mb-2"
+              width="50"
+              height="50"
+              title="People"
+            />Survey Questions
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <!--Survey-->
+    <div class="container border border-info rounded-lg bg-info">
+      <form>
+        <h2
+          class="card-title font-weight-bold mt-4"
+          style="font-family: 'Playfair Display', serif; text-decoration: underline; "
+        >
+          About You:
+        </h2>
+        <div class="form-group">
+          <label
+            class="font-weight-bold"
+            for="formGroupExampleInput"
+            style="font-family: 'Playfair Display', serif;"
+            id="name"
+            
+            >Name (Required)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput"
+            placeholder="First, Last Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label
+            class="font-weight-bold"
+            style="font-family: 'Playfair Display', serif;"
+            for="formGroupExampleInput2"
+            id="photo"
+          
+            >Link to Photo Image (Required)</label
+          >
+          <input
+            type="link"
+            class="form-control"
+            id="formGroupExampleInput2"
+            placeholder="Link a Photo" required
+          />
+        </div>
+        <br />
+
+        <!--Questions-->
+        <h2
+          class="card-title font-weight-bold mt-4"
+          style="font-family: 'Playfair Display', serif; text-decoration: underline;"
+        >
+          Questions:
+        </h2>
+
+        <!--Question 1-->
+        <h5 style="font-family: 'Source Sans Pro', sans-serif;">
+          Question 1:
+        </h5>
+        <div class="form-group" required>
+            <p style="font-family: 'Source Sans Pro', sans-serif;"><h6>Your mind is always buzzing with unexplored ideas and plans.
+            </h6></p>
+            <select data-placeholder="" class="form-control bg-warning border border-dark rounded-pill" id="Q1" style="width:18%;">
+              <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold">Select an Option</option>
+              <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold" value="1">1 (strongly disagree)</option>
+              <option style="font-family: 'Source Sans Pro', sans-serif;" value="2">2</option>
+              <option style="font-family: 'Source Sans Pro', sans-serif;" value="3">3</option>
+              <option style="font-family: 'Source Sans Pro', sans-serif;" value="4">4</option>
+              <option style="font-family: 'Source Sans Pro', sans-serif;"  class="font-weight-bold" value="5">5 (strongly agree)</option>
+            </select>
+          </div>
+
+        <br />
+
+         <!--Question 2-->
+         <h5 style="font-family: 'Source Sans Pro', sans-serif;">
+            Question 2:
+          </h5>
+          <div class="form-group">
+              <p style="font-family: 'Source Sans Pro', sans-serif;"><h6>Generally speaking, you rely more on your experience than your
+                  imagination.</h6></p>
+              <select data-placeholder="" class="form-control bg-warning border border-dark rounded-pill" id="Q2" style="width:18%;">
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold">Select an Option</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold" value="1">1 (strongly disagree)</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="2">2</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="3">3</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="4">4</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;"  class="font-weight-bold" value="5">5 (strongly agree)</option>
+              </select>
+            </div>
+  
+          <br />
+
+           <!--Question 3-->
+        <h5 style="font-family: 'Source Sans Pro', sans-serif;">
+            Question 3:
+          </h5>
+          <div class="form-group">
+              <p style="font-family: 'Source Sans Pro', sans-serif;"><h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6></p>
+              <select data-placeholder="" class="form-control bg-warning border border-dark rounded-pill" id="Q3" style="width:18%;">
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold">Select an Option</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold" value="1">1 (strongly disagree)</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="2">2</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="3">3</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="4">4</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;"  class="font-weight-bold" value="5">5 (strongly agree)</option>
+              </select>
+            </div>
+  
+          <br />
+
+         <!--Question 4-->
+         <h5 style="font-family: 'Source Sans Pro', sans-serif;">
+            Question 4:
+          </h5>
+          <div class="form-group">
+              <p style="font-family: 'Source Sans Pro', sans-serif;"><h6>You rarely do something just out of sheer curiosity.
+              </h6></p>
+              <select data-placeholder="" class="form-control bg-warning border border-dark rounded-pill" id="Q4" style="width:18%;">
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold">Select an Option</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold" value="1">1 (strongly disagree)</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="2">2</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="3">3</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="4">4</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;"  class="font-weight-bold" value="5">5 (strongly agree)</option>
+              </select>
+            </div>
+  
+          <br />
+
+         <!--Question 5-->
+         <h5 style="font-family: 'Source Sans Pro', sans-serif;">
+            Question 5:
+          </h5>
+          <div class="form-group">
+              <p style="font-family: 'Source Sans Pro', sans-serif;"><h6>People can rarely upset you.
+              </h6></p>
+              <select data-placeholder="" class="form-control bg-warning border border-dark rounded-pill" id="Q5" style="width:18%;">
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold">Select an Option</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold" value="1">1 (strongly disagree)</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="2">2</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="3">3</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="4">4</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;"  class="font-weight-bold" value="5">5 (strongly agree)</option>
+              </select>
+            </div>
+  
+          <br />
+
+        
+         <!--Question 6-->
+         <h5 style="font-family: 'Source Sans Pro', sans-serif;">
+            Question 6:
+          </h5>
+          <div class="form-group">
+              <p style="font-family: 'Source Sans Pro', sans-serif;"><h6>It is often difficult for you to relate to other people’s feelings.
+
+              </h6></p>
+              <select data-placeholder="" class="form-control bg-warning border border-dark rounded-pill" id="Q6" style="width:18%;">
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold">Select an Option</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold" value="1">1 (strongly disagree)</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="2">2</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="3">3</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="4">4</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;"  class="font-weight-bold" value="5">5 (strongly agree)</option>
+              </select>
+            </div>
+  
+          <br />
+  
+        
+         <!--Question 7-->
+         <h5 style="font-family: 'Source Sans Pro', sans-serif;">
+            Question 7:
+          </h5>
+          <div class="form-group">
+              <p style="font-family: 'Source Sans Pro', sans-serif;"><h6>In a discussion, truth should be more important than people’s sensitivities.
+              </h6></p>
+              <select data-placeholder="" class="form-control bg-warning border border-dark rounded-pill" id="Q7" style="width:18%;">
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold">Select an Option</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold" value="1">1 (strongly disagree)</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="2">2</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="3">3</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="4">4</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;"  class="font-weight-bold" value="5">5 (strongly agree)</option>
+              </select>
+            </div>
+  
+          <br />
+  
+
+         <!--Question 8-->
+         <h5 style="font-family: 'Source Sans Pro', sans-serif;">
+            Question 8:
+          </h5>
+          <div class="form-group">
+              <p style="font-family: 'Source Sans Pro', sans-serif;"><h6>You rarely get carried away by fantasies and ideas.</h6></p>
+              <select data-placeholder="" class="form-control bg-warning border border-dark rounded-pill" id="Q8" style="width:18%;">
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold">Select an Option</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold" value="1">1 (strongly disagree)</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="2">2</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="3">3</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="4">4</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;"  class="font-weight-bold" value="5">5 (strongly agree)</option>
+              </select>
+            </div>
+  
+          <br />
+  
+        
+         <!--Question 9-->
+         <h5 style="font-family: 'Source Sans Pro', sans-serif;">
+            Question 9:
+          </h5>
+          <div class="form-group">
+              <p style="font-family: 'Source Sans Pro', sans-serif;"><h6>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h6></p>
+              <select data-placeholder="" class="form-control bg-warning border border-dark rounded-pill" id="Q9" style="width:18%;">
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold">Select an Option</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold" value="1">1 (strongly disagree)</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="2">2</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="3">3</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="4">4</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;"  class="font-weight-bold" value="5">5 (strongly agree)</option>
+              </select>
+            </div>
+  
+          <br />
+  
+         <!--Question 10-->
+         <h5 style="font-family: 'Source Sans Pro', sans-serif;">
+            Question 10:
+          </h5>
+          <div class="form-group">
+              <p style="font-family: 'Source Sans Pro', sans-serif;"><h6>You feel more energetic after spending time with a group of people.</h6></p>
+              <select data-placeholder="" class="form-control bg-warning border border-dark rounded-pill" id="Q10" style="width:18%;">
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold">Select an Option</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" class="font-weight-bold" value="1">1 (strongly disagree)</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="2">2</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="3">3</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;" value="4">4</option>
+                <option style="font-family: 'Source Sans Pro', sans-serif;"  class="font-weight-bold" value="5">5 (strongly agree)</option>
+              </select>
+            </div>
+  
+          <br />
+  
+        <!--Submit Button-->
+        <div class="container text-center">
+         <button type="submit" class="btn btn-success border-dark rounded-pill font-weight-bold" style="width: 12%;">Submit</button>
+
+        </div>
+
+        <br>
+       
+  
+
+
+        <!--Form bottom-->
+      </form>
+    </div>
+
+    <br />
+
+    <!--Links-->
+    <div class="container text-center">
+      <div style="font-family: 'Source Sans Pro', sans-serif;">
+        <a href="/app/data/friends.js" target="_blank">API Friends List</a> |
+        <a href="https://github.com/pprchang/FriendFinder" target="_blank"
+          >GitHub Repo</a
+        >
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+
+      // JS code for posting new friend
+  
+      $('#submit').on("click", function (event) {
+          event.preventDefault();
+          
+          var newFriend = {
+            name: $('#name').val(),
+            photo: $('#photo').val(),
+            scores: [
+              $('#q1').val(),
+              $('#q2').val(),
+              $('#q3').val(),
+              $('#q4').val(),
+              $('#q5').val(),
+              $('#q6').val(),
+              $('#q7').val(),
+              $('#q8').val(),
+              $('#q9').val(),
+              $('#q10').val(),
+                ]}
+  
+      
+          $.post("/api/friends", newFriend).then(function(data) {
+              console.log(data);
+  
+          });
+  
+      });
+  
+  </script>
+
+
+
+  </body>
+</html>
