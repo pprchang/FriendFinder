@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
+    
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -15,33 +15,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap" rel="stylesheet">
-
-    <title>Friend Finder</title>
-  </head>
-
-  <body>
-    <div class="container align-middle mt-4">
-      <div class="card text-center bg-info rounded-pill" style="width: 70rem;">
-        <div class="card-body">
-          <h1 class="card-title font-weight-bold text-white" style="font-family: 'Playfair Display', serif;"><img src="/app/public/img/people.svg" alt="People" class="mr-3 mb-3" width="50" height="50" title="People">Friend Finder</h1>
-          <p class="card-text"><h5 class=" font-weight-bold" style="font-family: 'Source Sans Pro', sans-serif;">Take a Survey to Find Your Next Friend.</h5></p>
-          <a href="survey.html" class="btn btn-warning text-bold font-weight-bold rounded-pill" style="font-family: 'Source Sans Pro', sans-serif;"><img src="/app/public/img/survey.svg" alt="Survey" class="mr-1" width="30" height="30" title="People">TAKE SURVEY</a>
-        </div>
-      </div>
-    </div>
-    
-    <br>
-
-    <div class="container text-center">
-        <div style="font-family: 'Source Sans Pro', sans-serif;">
-            <a href="/app/data/friends.js"  target="_blank">API Friends List</a> | <a href="https://github.com/pprchang/FriendFinder" target="_blank">GitHub Repo</a>
-        </div>
-
-    </div>
-
-    <!-- Optional JavaScript -->
+     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -58,5 +32,39 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+
+    <!--google font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <title>Friend Finder</title>
+  </head>
+
+  <body>
+    <div class="container align-middle mt-4">
+      <div class="card text-center bg-info rounded-pill" style="width: 70rem;">
+        <div class="card-body">
+          <h1 class="card-title font-weight-bold text-white" style="font-family: 'Playfair Display', serif;">Friend Finder</h1>
+          <p class="card-text"><h5 class=" font-weight-bold" style="font-family: 'Source Sans Pro', sans-serif;">Take a Survey to Find Your Next Friend.</h5></p>
+          <a href="/survey" class="btn btn-warning text-bold font-weight-bold rounded-pill" style="font-family: 'Source Sans Pro', sans-serif;">TAKE SURVEY</a>
+        </div>
+      </div>
+    </div>
+    
+    <br>
+
+    <div class="container text-center">
+        <div style="font-family: 'Source Sans Pro', sans-serif;">
+            <a href="/api/friends"  target="_blank">API Friends List</a> | <a href="https://github.com/pprchang/FriendFinder" target="_blank">GitHub Repo</a>
+        </div>
+
+    </div>
+
   </body>
 </html>
