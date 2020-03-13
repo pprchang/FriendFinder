@@ -8,6 +8,11 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    
+    <!--Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -17,11 +22,7 @@
     />
      <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -39,9 +40,6 @@
       rel="stylesheet"
     />
 
-    <!--Jquery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
     <title>Survey</title>
   </head>
@@ -65,7 +63,7 @@
 
     <!--Survey-->
     <div class="container border border-info rounded-lg bg-info">
-      <form>
+      <form name="survey">
         <h2
           class="card-title font-weight-bold mt-4"
           style="font-family: 'Playfair Display', serif; text-decoration: underline; "
@@ -86,6 +84,8 @@
             id="name"
             placeholder="First, Last Name"
             required
+            name="name"
+        
           />
         </div>
         <div class="form-group">
@@ -100,7 +100,9 @@
             type="text"
             class="form-control"
             id="photo"
-            placeholder="Link a Photo" required
+            placeholder="Link a Photo" 
+            required
+            name="photo"
           />
         </div>
         <br />
@@ -312,6 +314,7 @@
 
         <br>
        
+
   
 
 
@@ -331,16 +334,58 @@
       </div>
     </div>
 
+
+    <!--Modal-->
+
+    <div id="modalOne" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Your New Best Friend</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h2 id='bestFriend'></h2>
+            <img id='bestFriendImg'>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+
    
 
     <script type="text/JavaScript">
-
-      // JS code for posting new friend
   
       $('#submit').on("click", function (event) {
+        //validate to make sure name and photo are enter
+
+        let name = document.forms["survey"]["name"];
+        let photo = document.forms['survey']["photo"];
+
+        //conditional statement to check that name and photo input are not empty
+        //if name or photo is empty then pop up a window alert to alert user 
+        if (name.value === ''){
+          window.alert("Please enter your name.");
+          name.focus();
+          return false;
+        } else if (photo.value === ''){
+          window.alert("Please add a photo.");
+          photo.focus();
+          return false;
+        }
+        
+        else {
+
           event.preventDefault();
-          
-          let newFriend = {
+          //grab the info that the user enter and store it as newfriend variable
+           let newFriend = {
             name: $('#name').val(),
             photo: $('#photo').val(),
             scores: [
@@ -361,9 +406,17 @@
       
           $.post("/api/friends", newFriend).then(function(data) {
               console.log("survey.html", data);
-              alert("new friend post")
+              //display bestFriend name and photo into modal
+              $("#bestFriend").text(data.name);
+              $("#bestFriendImg").attr("src", data.photo);
 
-              $('#name').val(""),
+          });
+
+          //call/activiate modal
+          $("#modalOne").modal();
+          
+          //reset survey form
+          $('#name').val(""),
               $('#photo').val(""),
               $('#Q1').val(""),
               $('#Q2').val(""),
@@ -375,9 +428,9 @@
               $('#Q8').val(""),
               $('#Q9').val(""),
               $('#Q10').val("")
-              
-  
-          });
+
+        }
+
   
       });
   
